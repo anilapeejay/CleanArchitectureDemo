@@ -69,8 +69,23 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
-
     kapt(libs.hilt.compiler)
+
+    // okhttp
+    implementation(libs.logging.interceptor.v4120)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
+
+    // StateFlow lifecycle
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    // RecyclerView
+    implementation(libs.androidx.recyclerview)
+
+
 }
 kapt {
     correctErrorTypes = true
