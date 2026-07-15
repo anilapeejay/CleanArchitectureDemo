@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.legacy.kapt)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt)
 
-    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -24,18 +25,18 @@ android {
         compose = true
     }*/
 
-    composeOptions {
+    /*composeOptions {
         kotlinCompilerExtensionVersion = "1.5.15"
-    }
+    }*/
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-   /* kotlinOptions {
+    kotlinOptions {
         jvmTarget = "17"
-    }*/
+    }
 }
 
 dependencies {
@@ -84,7 +85,6 @@ dependencies {
 
     // RecyclerView
     implementation(libs.androidx.recyclerview)
-
 
 }
 kapt {
